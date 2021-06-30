@@ -66,7 +66,8 @@ const Contact = () => {
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <Box component="form" className={classes.form}>
+      {/* action="https://formspree.io/jfoster91@gmail.com" method="post" */}
+        <Box component="form" className={classes.form} >
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
