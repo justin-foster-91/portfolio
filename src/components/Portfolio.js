@@ -26,7 +26,11 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     maxWidth: 345,
     margin: "3rem auto",
+    background: 'rgb(178,190,181)',
   },
+  links: {
+    justifyContent: "center",
+  }
 }));
 
 const projects = [
@@ -137,17 +141,19 @@ const Portfolio = () => {
                   </Typography> */}
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary" href={`${project.livePage}`}>
-                  Live Demo
-                </Button>
-                <Button size="small" color="primary">
+              <CardActions className={classes.links}>
+                {project.livePage ?
+                  <Button size="small" color="primary" href={`${project.livePage}`}>
+                    Live Demo
+                  </Button>
+                : ''}
+                <Button size="small" color="primary" href={`${project.clientRepo}`}>
                   {project.serverRepo ? 'Client Repo' : 'Repo'}
                 </Button>
                 {project.serverRepo ? 
-                <Button size="small" color="primary">
-                  Server Repo
-                </Button>
+                  <Button size="small" color="primary" href={`${project.serverRepo}`}>
+                    Server Repo
+                  </Button>
                 : ''}
               </CardActions>
             </Card>
