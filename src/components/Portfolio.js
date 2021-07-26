@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
 const projects = [
   {
     name: "CodeSpells 'Nexus'",
-    description: `Developed a web app that allowed users to code “spells” which can be used both within the associated CodeSpells games, but also called within Twitch chat to affect the game being hosted live. This web app stored all spells and enabled users to share spells with one another while also displaying spells recently created or modified by other users.`,
-    technologies: 'React, Node.js, PostgresSQL, JavaScript, Docker',
+    description: `Developing a web app that allows users to code “spells” which can be used both within the associated CodeSpells games, but also called within Twitch chat to affect the game being hosted live. This web app stores all spells and enables users to share spells with one another while also displaying spells recently created or modified by other users.`,
+    technologies: 'React, Node.js, PostgresSQL, JavaScript, Docker, Express',
     image: nexusImage,
     livePage: 'http://nexus.codespells.org/spells',
     clientRepo: 'https://github.com/srfoster/nexus',
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     name: "CodeSpells Internship",
-    description: `This is an internship with a startup company called CodeSpells. I have been assisting with the project by creating new assets on my own GitHub profile that are being integrated into the official CodeSpells program.`,
+    description: `This was an internship at a startup that turned into a full-time position. I assisted with the development of an educational video game by creating new Unreal assets on my own GitHub profile that are being integrated into the official game.`,
     technologies: 'Lisp, Unreal Engine',
     image: codeSpellsUnrealImage,
     livePage: '',
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     name: "Breakout Game",
-    description: `Developed a game based around moving a paddle at the bottom on the screen to bounce a ball that will break bricks laid out towards the top of the screen. This is a recreation of an existing game to explore the capabilities of the Phaser framework.`,
+    description: `Developed a game based around moving a paddle at the bottom of the screen to bounce a ball that will break bricks laid out towards the top of the screen. This is a recreation of an existing game to explore the capabilities of the Phaser framework.`,
     technologies: 'Phaser, JavaScript, HTML',
     image: breakoutImage,
     livePage: 'https://breakout-delta.vercel.app/',
@@ -66,15 +66,7 @@ const projects = [
   },
   {
     name: "GOAT Goal Tracker",
-    description: `WHAT IS GOAT?
-    GOAT allows you to create, track and share your personal and professional
-    goals!! The goal creation process allows the user to create goals on
-    their time frame is tailored to their needs. The user can add new goals,
-    update existing goals and archive goals that don't suit them anymore. Users
-    can also give goals a personal point value. Making progress on a goal
-    earns the user points for redemption in our Goat store.
-    Users can share mutual goals for friendly competition or support or keep
-    their goals private behind our secure server.`,
+    description: `GOAT allows you to create, track, and share your personal and professional goals! The goal creation process allows the user to create goals on their own time frame tailored to their needs. The user can add new goals, update existing goals, and archive goals that don't suit them anymore. Users can also give goals a personal point value. Making progress on a goal earns the user points for redemption in our GOAT store. Users can share mutual goals for friendly competition or keep their goals private behind our secure server.`,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, JWT',
     image: goatImage,
     livePage: 'https://goat-client.vercel.app',
@@ -84,7 +76,7 @@ const projects = [
   },
   {
     name: "Spaced Repetition",
-    description: `This is a language learning app based on spaced repetition using data structures to increase the frequency of words that the user has gotten wrong and decreased the frequency of correct words.`,
+    description: `This is a language learning app based on spaced repetition using data structures to increase the frequency of words that the user has gotten wrong and to decrease the frequency of correct words.`,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, JWT',
     image: repetitionImage,
     livePage: 'https://spaced-repetition-xi.vercel.app/',

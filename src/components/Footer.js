@@ -39,7 +39,7 @@ const Footer = () => {
     <BottomNavigation className={classes.bottomNavContainer}>
       <BottomNavigationAction icon={<LinkedInIcon />} value="LinkedIn" className={classes.root} href='https://www.linkedin.com/in/justin-foster-7a540356/' />
       <BottomNavigationAction icon={<GitHubIcon />} value='GitHub' className={classes.root} href="https://github.com/justin-foster-91"/>
-      <BottomNavigationAction icon={<EmailIcon />} value='Email' className={classes.root} href="mailto:justinfoster@gmail.com"/>
+      <BottomNavigationAction icon={<EmailIcon />} value='Email' className={classes.root} href="mailto:jfoster91@gmail.com"/>
     </BottomNavigation>
   );
 };

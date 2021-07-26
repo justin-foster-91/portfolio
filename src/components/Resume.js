@@ -139,7 +139,7 @@ const Resume = () => {
             align="center"
             className={classes.subtitle1}
           >
-            Working with a small startup company to develop a social media oriented app for the users and followers to interact and share what they've made for the company's games.
+            Working with a coding education startup to develop a full-stack, code-sharing social media app for an educational game they are developing.
           </Typography>
         </Box>
         <Typography
