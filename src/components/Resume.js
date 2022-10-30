@@ -117,12 +117,14 @@ const Resume = () => {
         Working Experience
       </Typography>
       <Box component="div" className={classes.timeLine}>
+
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2022
+          2023
         </Typography>
+
         <Box component="div" className={classes.timeLineItem}>
           <Typography
             variant="h5"
@@ -132,32 +134,111 @@ const Resume = () => {
             full stack developer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            CodeSpells
+            Kitsap Dev
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Feb 2022 – Present
           </Typography>
           <Typography
             variant="subtitle1"
-            align="center"
+            align="left"
             className={classes.subtitle1}
           >
-            Working with a coding education startup to develop a full-stack, code-sharing social media app for an educational game they are developing.
+            <li>
+              Working on an application being rolled out to over 90,000 employees at one of the nation's largest healthcare providers.
+            </li>
+            <li>
+              Developing a digital conference game interface as replacement for large, in-person events.
+            </li>
+            <li>
+              Producing a gamified platform to promote culture change at hospitals.
+            </li>
           </Typography>
         </Box>
+
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2021
+          2022
         </Typography>
+
         <Box component="div" className={classes.timeLineItem}>
           <Typography
             variant="h5"
             align="center"
             className={classes.subHeading}
           >
-            Full Stack Developer Training
+            junior full stack developer
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Thought STEM
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Jan 2021 – Feb 2022
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="left"
+            className={classes.subtitle1}
+          >
+            <li>
+              Managed the complete application development process from conception to deployment.
+            </li>
+            <li>
+              Independently created the full-stack web app and set up the environment for later modifications.
+            </li>
+          </Typography>
+        </Box>
+
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2021
+        </Typography>
+
+        <Box component="div" className={classes.timeLineItem}>
+          <Typography
+            variant="h5"
+            align="center"
+            className={classes.subHeading}
+          >
+            game development internship
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Thought STEM
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Nov 2020 – Jan 2021
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="left"
+            className={classes.subtitle1}
+          >
+            <li>
+              Met game development and 3D asset creation goals.
+            </li>
+            <li>
+              Collaborated with co-workers to rapidly prototype a moddable video game.
+            </li>
+          </Typography>
+        </Box>
+
+        <Box component="div" className={classes.timeLineItem}>
+          <Typography
+            variant="h5"
+            align="center"
+            className={classes.subHeading}
+          >
+            Training: Full Stack Developer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
             Thinkful
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            June 2020 – Nov 2020
           </Typography>
           <Typography
             variant="subtitle1"
@@ -167,37 +248,14 @@ const Resume = () => {
             A crash course bootcamp to train participants on best practices in the industry and prepare them for full stack development using a wide range of technologies.
           </Typography>
         </Box>
+
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
           2020
         </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Engineering Technician
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            Terracon
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Running a wide range of tests for construction materials to ensure quality and safety for the finished structures.
-          </Typography>
-        </Box>        
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2018
-        </Typography>
+
       </Box>
     </Box>
   );

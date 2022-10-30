@@ -18,8 +18,8 @@ import Home from "@material-ui/icons/Home";
 import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
-import avatar from "../myAvatar.png";
-import self from "../me.jpeg";
+import avatar from "../images/myAvatar.png";
+import self from "../images/me.jpeg";
 import clsx from 'clsx';
 import Footer from "../components/Footer";
 
