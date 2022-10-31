@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
@@ -34,6 +34,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const projects = [
+  {
+    name: "Stopwatch",
+    description: ``,
+    technologies: 'React',
+    image: '',
+    livePage: '',
+    clientRepo: '',
+    serverRepo: '',
+    date: '',
+    link: <Link to='/projects/stopwatch'>Stopwatch</Link>
+  },
   {
     name: "CodeSpells 'Nexus'",
     description: `Developing a web app that allows users to code “spells” which can be used both within the associated CodeSpells games, but also called within Twitch chat to affect the game being hosted live. This web app stores all spells and enables users to share spells with one another while also displaying spells recently created or modified by other users.`,
@@ -134,19 +145,21 @@ const Portfolio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions className={classes.links}>
-                {project.livePage ?
-                  <Button size="small" color="primary" href={`${project.livePage}`}>
-                    Live Demo
-                  </Button>
-                : ''}
+                {project.livePage 
+                  ? <Button size="small" color="primary" href={`${project.livePage}`}>
+                      Live Demo
+                    </Button>
+                  : ''}
                 <Button size="small" color="primary" href={`${project.clientRepo}`}>
-                  {project.serverRepo ? 'Client Repo' : 'Repo'}
+                  {project.serverRepo 
+                    ? 'Client Repo' 
+                    : 'Repo'}
                 </Button>
-                {project.serverRepo ? 
-                  <Button size="small" color="primary" href={`${project.serverRepo}`}>
-                    Server Repo
-                  </Button>
-                : ''}
+                {project.serverRepo 
+                  ? <Button size="small" color="primary" href={`${project.serverRepo}`}>
+                      Server Repo
+                    </Button>
+                  : ''}
               </CardActions>
             </Card>
           </Grid>
