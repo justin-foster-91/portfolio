@@ -43,7 +43,8 @@ const projects = [
     clientRepo: '',
     serverRepo: '',
     date: '',
-    link: <Link to='/projects/stopwatch'>Stopwatch</Link>
+    link: 'portfolio/stopwatch',
+    internal: true,
   },
   {
     name: "CodeSpells 'Nexus'",
@@ -54,6 +55,7 @@ const projects = [
     clientRepo: 'https://github.com/srfoster/nexus',
     serverRepo: '',
     date: '',
+    internal: false,
   },
   {
     name: "CodeSpells Internship",
@@ -64,6 +66,7 @@ const projects = [
     clientRepo: 'https://github.com/justin-foster-91/cabin-items',
     serverRepo: '',
     date: 'December - January, 2020',
+    internal: false,
   },
   {
     name: "Breakout Game",
@@ -74,6 +77,7 @@ const projects = [
     clientRepo: 'https://github.com/justin-foster-91/breakout.git',
     serverRepo: '',
     date: 'January, 2020',
+    internal: false,
   },
   {
     name: "GOAT Goal Tracker",
@@ -84,6 +88,7 @@ const projects = [
     clientRepo: 'https://github.com/thinkful-ei-quail/goat-client.git',
     serverRepo: 'https://github.com/thinkful-ei-quail/goat-api',
     date: 'October, 2020',
+    internal: false,
   },
   {
     name: "Spaced Repetition",
@@ -94,6 +99,7 @@ const projects = [
     clientRepo: 'https://github.com/thinkful-ei-quail/SR-Client-Sonali-Justin.git',
     serverRepo: 'https://github.com/thinkful-ei-quail/SR-server-SonaliN-JustinF.git',
     date: 'August, 2020',
+    internal: false,
   },
   {
     name: "Starfinder Logbook",
@@ -106,6 +112,7 @@ const projects = [
     clientRepo: 'https://github.com/justin-foster-91/Logbook_Client',
     serverRepo: 'https://github.com/justin-foster-91/Logbook_Server',
     date: 'June, 2020',
+    internal: false,
   },
 ];
 
@@ -146,20 +153,28 @@ const Portfolio = () => {
               </CardActionArea>
               <CardActions className={classes.links}>
                 {project.livePage 
-                  ? <Button size="small" color="primary" href={`${project.livePage}`}>
+                &&  <Button size="small" color="primary" href={`${project.livePage}`}>
                       Live Demo
                     </Button>
-                  : ''}
-                <Button size="small" color="primary" href={`${project.clientRepo}`}>
-                  {project.serverRepo 
-                    ? 'Client Repo' 
-                    : 'Repo'}
-                </Button>
+                }
+
+                {project.internal 
+                ? <Button size="small" color="primary" href={`${project.link}`}>
+                    Demo
+                  </Button>
+                : <Button size="small" color="primary" href={`${project.clientRepo}`}>
+                    {project.serverRepo 
+                      ? 'Client Repo' 
+                      : 'Repo'}
+                  </Button>
+                }
+
+
                 {project.serverRepo 
-                  ? <Button size="small" color="primary" href={`${project.serverRepo}`}>
+                &&  <Button size="small" color="primary" href={`${project.serverRepo}`}>
                       Server Repo
                     </Button>
-                  : ''}
+                }
               </CardActions>
             </Card>
           </Grid>
