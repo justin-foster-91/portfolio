@@ -29,7 +29,6 @@ function App() {
         <Route exact path='/portfolio/stopwatch' component={Stopwatch}/>
         <Route exact path='/portfolio/clock' component={Clock}/>
 
-        {/* TODO: is there a way to list these routes without the /portfolio ? */}
         {/* <Route path='/portfolio'>
           <Route path='stopwatch' component={Stopwatch}/>
           <Route path='clock' component={Clock}/>

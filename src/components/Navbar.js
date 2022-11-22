@@ -94,7 +94,6 @@ const Navbar = () => {
 
   return (
     <>
-    {/* TODO: is drawer better on the left or the right of the screen? */}
       <Box component="nav">
         <AppBar position="static" className={classes.appbar}>
           <Toolbar className={open && classes.toolHeader}>
@@ -107,7 +106,6 @@ const Navbar = () => {
           </Toolbar>
         </AppBar>
       </Box>
-      {/* TODO: change color of side bar */}
       <Drawer open={open} anchor="left" onClose={() => setOpen(false)}>
         {sideList()}
         <Footer />

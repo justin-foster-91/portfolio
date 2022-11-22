@@ -1,44 +1,47 @@
-import React, {useState} from 'react';
-
-let interval;
+import React, {useState, useEffect} from 'react';
 
 function Stopwatch() {
   const [timer, setTimer] = useState('00:00:00');
-  // const [totalSeconds, setTotalSeconds] = useState(0);
+  const [timerActive, setTimerActive] = useState(false);
+  const [totalSeconds, setTotalSeconds] = useState(0);
 
-  let totalSeconds = 0;
+  useEffect(() => {
+    let interval;
+
+    if (timerActive) {
+      interval = setInterval(() => {
+        changeTime()
+      }, 250);
+    }
+  
+    return () => clearInterval(interval);
+  }, [timerActive, totalSeconds]);
 
   const startTimer = () => {
-    interval = setInterval(changeTime, 250)
-    // setInterval(changeTime, 250)
+    setTimerActive(true)
   }
 
   const stopTimer = () => {
-    clearInterval(interval)
-    // interval = 0;
+    setTimerActive(false)
+  }
 
-    // clearInterval()
+  const resetTimer = () => {
+    setTimerActive(false)
+    setTimer('00:00:00')
+    setTotalSeconds(0)
   }
 
   const changeTime = () => {
-    totalSeconds++;
-    let splitTimer = timer.split(':');
-
-    // let hour = splitTimer[0]
-    // let minute = splitTimer[1]
-    // let second = splitTimer[2]
+    setTotalSeconds(totalSeconds+1)
 
     setTimer(secondsToHMS(totalSeconds))
   }
 
   // number totalSeconds => string HH:MM:SS
   const secondsToHMS = (total) => {
-    console.log(total);
     let HH = '00';
     let MM = '00';
     let SS = '00';
-
-    console.log("MM: ", MM);
 
     // HH
     if (Math.floor(total/3600)) {
@@ -52,40 +55,15 @@ function Stopwatch() {
       total = total - (MM * 60)
     }
 
-    console.log("MM: ", MM);
-
     // SS
     SS = total;
 
+    if (SS < 10 && SS >= 0) SS = `0${SS}`
+    if (MM < 10 && MM > 0) MM = `0${MM}`
+    if (HH < 10 && HH > 0) HH = `0${HH}`
 
-
-    // SS = total % 60;
-    // // total = total - SS;
-
-    // MM = (total - SS) % 3600;
-    // // MM = total % 3600;
-    // // total = total - MM
-
-    // HH = (total - ((total - SS) % 86400)) % 60;
-    // // HH = total
-    
-    
-
-
-
-    if (SS < 10) SS = `0${SS}`
-    if (MM < 10) MM = `0${MM}`
-    if (HH < 10) HH = `0${HH}`
-
-    console.log("MM: ", MM);
-
-    // console.log(object);
     return `${HH}:${MM}:${SS}`
   }
-
-  // 110 => 01:50
-
-
 
   return (
     <>
@@ -95,19 +73,9 @@ function Stopwatch() {
 
       <button onClick={startTimer}>Start</button>
       <button onClick={stopTimer}>Stop</button>
-      <button>Reset</button>
+      <button onClick={resetTimer}>Reset</button>
     </>
   );
 }
-
-
-  // let totalSeconds;
-  // function countUpTimer() {
-  //   ++totalSeconds;
-  //   var hour = Math.floor(totalSeconds / 3600);
-  //   var minute = Math.floor((totalSeconds - hour * 3600) / 60);
-  //   var seconds = totalSeconds - (hour * 3600 + minute * 60);
-  //   document.getElementById("count_up_timer").innerHTML = hour + ":" + minute + ":" + seconds;
-  // }
 
 export default Stopwatch;
