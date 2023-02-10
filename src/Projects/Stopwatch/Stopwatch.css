@@ -1,0 +1,54 @@
+@font-face {
+  font-family:'digital-clock-font';
+  src: url('../../Resources/Fonts/Digital/digital-7.ttf');
+}
+
+#outer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  /* background-image: url(../../images/stopwatchBackground.png);
+  background-size: contain; */
+}
+
+#watch {
+  width: 50%;
+  margin: 0 auto;
+  /* background-color: gray; */
+}
+
+#screen {
+  font-family: "digital-clock-font";
+  justify-content: center;
+  font-size: xx-large;
+  /* padding-left: 34%; */
+  /* margin: 0 auto; */
+  /* flex-shrink: 2; */
+  /* width: 100px; */
+}
+
+#screenText {
+  width: 130px;
+  justify-content: left;
+}
+
+#buttonRow {
+  display: flex;
+  justify-content: center;
+}
+
+#laps {
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}

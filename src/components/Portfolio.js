@@ -17,6 +17,7 @@ import goatImage from "../images/GOAT.png";
 import codeSpellsUnrealImage from "../images/CodeSpells.png";
 import breakoutImage from "../images/breakout.png";
 import nexusImage from "../images/nexus.png";
+import stopwatchImage from "../images/Stopwatch.PNG"
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -37,8 +38,8 @@ const projects = [
   {
     name: "Stopwatch",
     description: ``,
-    technologies: 'React',
-    image: '',
+    technologies: 'React, JavaScript, CSS',
+    image: stopwatchImage,
     livePage: '',
     clientRepo: '',
     serverRepo: '',
