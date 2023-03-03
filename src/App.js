@@ -23,17 +23,6 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/resume" component={Resume} />
 
-        <Route exact path="/portfolio" component={Portfolio} /> 
-        {/* <Route path="/portfolio/:id" component={Project}/> */}
-
-        <Route exact path='/portfolio/stopwatch' component={Stopwatch}/>
-        <Route exact path='/portfolio/clock' component={Clock}/>
-
-        {/* <Route path='/portfolio'>
-          <Route path='stopwatch' component={Stopwatch}/>
-          <Route path='clock' component={Clock}/>
-        </Route> */}
-
         <Route exact path="/contact" component={Contact} />
 
         <Route render={() => <h1>404: page not found</h1>} />

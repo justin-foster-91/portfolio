@@ -122,7 +122,7 @@ const Resume = () => {
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2023
+          Present
         </Typography>
 
         <Box component="div" className={classes.timeLineItem}>
@@ -145,14 +145,18 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             <li>
-              Working on an application being rolled out to over 90,000 employees at one of the nation's largest healthcare providers.
+              Worked on an application rolled out to 90,000+ employees at one of the nation's largest healthcare providers.
             </li>
             <li>
-              Developing a digital conference game interface as replacement for large, in-person events.
+              Developed a digital conference game interface as replacement for large, in-person events.
             </li>
             <li>
-              Producing a gamified platform to promote culture change at hospitals.
+              Produced a gamified platform to promote culture change at hospitals.
             </li>
+            <br/>
+            <code>
+              <b>Tech Stack:</b> JavaScript, React, Node.js, Express.js, Unity3D, C#, MySQL
+            </code>
           </Typography>
         </Box>
 
@@ -188,6 +192,10 @@ const Resume = () => {
             <li>
               Independently created the full-stack web app and set up the environment for later modifications.
             </li>
+            <br/>
+            <code>
+              <b>Tech Stack:</b> JavaScript, React, Node.js, Express.js, PostgreSQL, Docker
+            </code>
           </Typography>
         </Box>
 
@@ -218,11 +226,15 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             <li>
-              Met game development and 3D asset creation goals.
+              Created new 3D assets for game development.
             </li>
             <li>
-              Collaborated with co-workers to rapidly prototype a moddable video game.
+              Rapidly prototyped a moddable video game.
             </li>
+            <br/>
+            <code>
+              <b>Tech Stack:</b> JavaScript, React, Node.js, Express.js, PostgreSQL, Unreal Engine
+            </code>
           </Typography>
         </Box>
 
@@ -245,7 +257,13 @@ const Resume = () => {
             align="center"
             className={classes.subtitle1}
           >
-            A crash course bootcamp to train participants on best practices in the industry and prepare them for full stack development using a wide range of technologies.
+            <p>
+              A crash course bootcamp to train participants on best practices in the industry and prepare them for full stack development using a wide range of technologies.
+            </p>
+
+            <code>
+              <b>Tech Stack:</b> JavaScript, React, Node.js, Express.js, PostgreSQL
+            </code>
           </Typography>
         </Box>
 
