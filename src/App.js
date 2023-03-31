@@ -6,10 +6,6 @@ import Resume from "./components/Resume";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
-import Project from "./components/Project";
-import Stopwatch from './Projects/Stopwatch/Stopwatch';
-import Clock from './Projects/Clock/Clock';
-
 import "./App.css";
 
 function App() {
@@ -22,7 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/resume" component={Resume} />
-
+        <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
 
         <Route render={() => <h1>404: page not found</h1>} />

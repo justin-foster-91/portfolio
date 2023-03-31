@@ -10,14 +10,11 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-
 import logbookImage from "../images/Logbook.png";
 import repetitionImage from "../images/Spaced_Repetition.jpg";
 import goatImage from "../images/GOAT.png";
 import codeSpellsUnrealImage from "../images/CodeSpells.png";
-import breakoutImage from "../images/breakout.png";
-import nexusImage from "../images/nexus.png";
-import stopwatchImage from "../images/Stopwatch.PNG"
+import codeSharingImage from "../images/CodeSharingApp.PNG";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -36,24 +33,12 @@ const useStyles = makeStyles((theme) => ({
 
 const projects = [
   {
-    name: "Stopwatch",
-    description: ``,
-    technologies: 'React, JavaScript, CSS',
-    image: stopwatchImage,
-    livePage: '',
-    clientRepo: '',
-    serverRepo: '',
-    date: '',
-    link: 'portfolio/stopwatch',
-    internal: true,
-  },
-  {
-    name: "CodeSpells 'Nexus'",
+    name: "Code Sharing App",
     description: `Developing a web app that allows users to code “spells” which can be used both within the associated CodeSpells games, but also called within Twitch chat to affect the game being hosted live. This web app stores all spells and enables users to share spells with one another while also displaying spells recently created or modified by other users.`,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, Docker, Express',
-    image: nexusImage,
-    livePage: 'http://nexus.codespells.org/spells',
-    clientRepo: 'https://github.com/srfoster/nexus',
+    image: codeSharingImage,
+    livePage: '',
+    clientRepo: 'https://github.com/justin-foster-91/code_sharing',
     serverRepo: '',
     date: '',
     internal: false,
@@ -70,22 +55,11 @@ const projects = [
     internal: false,
   },
   {
-    name: "Breakout Game",
-    description: `Developed a game based around moving a paddle at the bottom of the screen to bounce a ball that will break bricks laid out towards the top of the screen. This is a recreation of an existing game to explore the capabilities of the Phaser framework.`,
-    technologies: 'Phaser, JavaScript, HTML',
-    image: breakoutImage,
-    livePage: 'https://breakout-delta.vercel.app/',
-    clientRepo: 'https://github.com/justin-foster-91/breakout.git',
-    serverRepo: '',
-    date: 'January, 2020',
-    internal: false,
-  },
-  {
     name: "GOAT Goal Tracker",
     description: `GOAT allows you to create, track, and share your personal and professional goals! The goal creation process allows the user to create goals on their own time frame tailored to their needs. The user can add new goals, update existing goals, and archive goals that don't suit them anymore. Users can also give goals a personal point value. Making progress on a goal earns the user points for redemption in our GOAT store. Users can share mutual goals for friendly competition or keep their goals private behind our secure server.`,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, JWT',
     image: goatImage,
-    livePage: 'https://goat-client.vercel.app',
+    livePage: '',
     clientRepo: 'https://github.com/thinkful-ei-quail/goat-client.git',
     serverRepo: 'https://github.com/thinkful-ei-quail/goat-api',
     date: 'October, 2020',
@@ -96,7 +70,7 @@ const projects = [
     description: `This is a language learning app based on spaced repetition using data structures to increase the frequency of words that the user has gotten wrong and to decrease the frequency of correct words.`,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, JWT',
     image: repetitionImage,
-    livePage: 'https://spaced-repetition-xi.vercel.app/',
+    livePage: '',
     clientRepo: 'https://github.com/thinkful-ei-quail/SR-Client-Sonali-Justin.git',
     serverRepo: 'https://github.com/thinkful-ei-quail/SR-server-SonaliN-JustinF.git',
     date: 'August, 2020',
@@ -109,7 +83,7 @@ const projects = [
     The system supports individual logins. `,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, JWT',
     image: logbookImage,
-    livePage: 'https://starfinder-client.justin-foster-91.vercel.app/',
+    livePage: '',
     clientRepo: 'https://github.com/justin-foster-91/Logbook_Client',
     serverRepo: 'https://github.com/justin-foster-91/Logbook_Server',
     date: 'June, 2020',
@@ -146,10 +120,6 @@ const Portfolio = () => {
                   <Typography variant="body2" color="textSecondary">
                     <b>Technologies:</b> {project.technologies}
                   </Typography>
-                  {/* <br/>
-                  <Typography variant="body2" color="textSecondary">
-                    {project.date}
-                  </Typography> */}
                 </CardContent>
               </CardActionArea>
               <CardActions className={classes.links}>
@@ -160,10 +130,10 @@ const Portfolio = () => {
                 }
 
                 {project.internal 
-                ? <Button size="small" color="primary" href={`${project.link}`}>
+                ? <Button size="small" color="primary" href={`${project.link}`} target="_blank">
                     Demo
                   </Button>
-                : <Button size="small" color="primary" href={`${project.clientRepo}`}>
+                : <Button size="small" color="primary" href={`${project.clientRepo}`} target="_blank">
                     {project.serverRepo 
                       ? 'Client Repo' 
                       : 'Repo'}
@@ -172,7 +142,7 @@ const Portfolio = () => {
 
 
                 {project.serverRepo 
-                &&  <Button size="small" color="primary" href={`${project.serverRepo}`}>
+                &&  <Button size="small" color="primary" href={`${project.serverRepo}`} target="_blank">
                       Server Repo
                     </Button>
                 }
