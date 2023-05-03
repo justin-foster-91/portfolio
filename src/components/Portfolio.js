@@ -15,6 +15,7 @@ import repetitionImage from "../images/Spaced_Repetition.jpg";
 import goatImage from "../images/GOAT.png";
 import codeSpellsUnrealImage from "../images/CodeSpells.png";
 import codeSharingImage from "../images/CodeSharingApp.PNG";
+import Starfinder_Demo from "../images/Starfinder_Demo.PNG"
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -32,6 +33,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const projects = [
+  {
+    name: "Starfinder Ship Builder",
+    description: 'This is a revision of a Starfinder app I made when I was first learning to code. It allows users to create spaceships based on the rules of the game system and customize the various ship parts. It is still in progress but has a drastically cleaner UI and much more functionality.',
+    technologies: 'JavaScript, React, HTML, CSS',
+    image: Starfinder_Demo,
+    livePage: '',
+    clientRepo: 'https://github.com/justin-foster-91/Logbook_Client_v2',
+    serverRepo: '',
+    date: '',
+    internal: false,
+  },
   {
     name: "Code Sharing App",
     description: `Developing a web app that allows users to code “spells” which can be used both within the associated CodeSpells games, but also called within Twitch chat to affect the game being hosted live. This web app stores all spells and enables users to share spells with one another while also displaying spells recently created or modified by other users.`,
