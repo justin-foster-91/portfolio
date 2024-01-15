@@ -118,11 +118,51 @@ const Resume = () => {
       </Typography>
       <Box component="div" className={classes.timeLine}>
 
-        <Typography
+      <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
           Present
+        </Typography>
+
+      <Box component="div" className={classes.timeLineItem}>
+          <Typography
+            variant="h5"
+            align="center"
+            className={classes.subHeading}
+          >
+            software developer associates
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Bates Technical College
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Aug 2023 – Aug 2024
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="left"
+            className={classes.subtitle1}
+          >
+            <p>
+              Associates Degree in progress for two separate tracks.
+            </p>
+            <li>Software Development AAS-T </li>
+            <li>Business and Data Analytics AAS-T </li>
+
+            <br/>
+            <code>
+              <b>Technologies:</b> JavaScript, React, Java, C#, SQL, Excel, Database Admin, Database Design, Data Structures, App Development
+            </code>
+          </Typography>
+        </Box>
+
+
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2023
         </Typography>
 
         <Box component="div" className={classes.timeLineItem}>
@@ -131,13 +171,13 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            full stack developer
+            software engineer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
             Kitsap Dev
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            Feb 2022 – Present
+            Feb 2022 – Aug 2023
           </Typography>
           <Typography
             variant="subtitle1"
@@ -145,7 +185,7 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             <li>
-              Worked on an application rolled out to 90,000+ employees at one of the nation's largest healthcare providers.
+              Launched application used by 90,000+ employees at one of the nation's largest healthcare providers.
             </li>
             <li>
               Developed a digital conference game interface as replacement for large, in-person events.
@@ -173,7 +213,7 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            junior full stack developer
+            software engineer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
             Thought STEM
@@ -212,7 +252,7 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            game development internship
+            video game developer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
             Thought STEM
@@ -262,7 +302,7 @@ const Resume = () => {
             </p>
 
             <code>
-              <b>Tech Stack:</b> JavaScript, React, Node.js, Express.js, PostgreSQL
+              <b>Technologies:</b> JavaScript, React, Node.js, Express.js, PostgreSQL
             </code>
           </Typography>
         </Box>
