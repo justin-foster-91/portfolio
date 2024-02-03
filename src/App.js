@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, useHistory } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Home from "./components/Home";
 import Resume from "./components/Resume";
@@ -9,7 +9,6 @@ import Contact from "./components/Contact";
 import "./App.css";
 
 function App() {
-  let history = useHistory();
 
   return (
     <>

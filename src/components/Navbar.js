@@ -64,7 +64,7 @@ const menuItems = [
 ];
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const classes = useStyles();
 
@@ -106,7 +106,7 @@ const Navbar = () => {
           </Toolbar>
         </AppBar>
       </Box>
-      <Drawer open={open} anchor="left" onClose={() => setOpen(false)}>
+      <Drawer open={open} anchor="left" hideBackdrop="true" onClose={() => setOpen(false)}>
         {sideList()}
         <Footer />
       </Drawer>

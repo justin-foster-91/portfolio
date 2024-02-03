@@ -41,7 +41,7 @@ const Title = () => {
         <Avatar className={classes.avatar} src={self} alt="Justin Foster" />
       </Grid>
       <Typography className={classes.title} variant="h4">
-        <Typed strings={["Justin Foster"]} typeSpeed={40} />
+        <Typed strings={["Justin Foster"]} typeSpeed={30} />
       </Typography>
 
       <Typography className={classes.subtitle} variant="h5">
@@ -51,8 +51,8 @@ const Title = () => {
             "Backend Developer",
             "Full Stack Developer",
           ]}
-          typeSpeed={40}
-          backSpeed={50}
+          typeSpeed={50}
+          backSpeed={60}
           // loop
         />
       </Typography>
