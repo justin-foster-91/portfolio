@@ -22,7 +22,6 @@ import avatar from "../images/myAvatar.png";
 import self from "../images/me.jpeg";
 import clsx from 'clsx';
 import Footer from "../components/Footer";
-import CssBaseline from '@mui/material/CssBaseline';
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -68,14 +67,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(true);
 
   const classes = useStyles();
-  
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
 
   const sideList = () => (
     <Box className={classes.menuSliderContainer} component="div">
@@ -104,7 +95,6 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        {/* <CssBaseline /> */}
         <AppBar position="static" className={classes.appbar}>
           <Toolbar className={open && classes.toolHeader}>
             <IconButton onClick={() => setOpen(true)}>
