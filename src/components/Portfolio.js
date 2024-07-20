@@ -34,6 +34,17 @@ const useStyles = makeStyles((theme) => ({
 
 const projects = [
   {
+    name: "Rail Shooter Game",
+    description: 'This is a demo game with a single level. The player is on an animation track with horizontal and vertical movement controls but no input on speed or direction. The objective is to shoot down as many alien ships as possible during the level to increase your score.',
+    technologies: 'Unity, C#',
+    image: <iframe width="560" height="315" src="https://www.youtube.com/embed/FPyWH6qF3Ug?si=nJ5VnEZbZcZyNx54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
+    livePage: '',
+    clientRepo: 'https://github.com/justin-foster-91/Argon_Assault',
+    serverRepo: '',
+    date: '',
+    internal: false,
+  },
+  {
     name: "Starfinder Ship Builder",
     description: 'This is a revision of the Starfinder Logbook app I made when I was first learning to code. It allows users to create spaceships based on the rules of the game system and customize the various ship parts. It is still in progress but has a drastically cleaner UI and much more functionality.',
     technologies: 'JavaScript, React, HTML, CSS',

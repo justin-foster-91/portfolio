@@ -64,7 +64,7 @@ const menuItems = [
 ];
 
 const Navbar = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const classes = useStyles();
 
