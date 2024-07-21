@@ -15,7 +15,8 @@ import repetitionImage from "../images/Spaced_Repetition.jpg";
 import goatImage from "../images/GOAT.png";
 import codeSpellsUnrealImage from "../images/CodeSpells.png";
 import codeSharingImage from "../images/CodeSharingApp.PNG";
-import Starfinder_Demo from "../images/Starfinder_Demo.PNG"
+import Starfinder_Demo from "../images/Starfinder_Demo.PNG";
+import RailShooter from "../images/RailShooter.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -37,8 +38,8 @@ const projects = [
     name: "Rail Shooter Game",
     description: 'This is a demo game with a single level. The player is on an animation track with horizontal and vertical movement controls but no input on speed or direction. The objective is to shoot down as many alien ships as possible during the level to increase your score.',
     technologies: 'Unity, C#',
-    image: <iframe width="560" height="315" src="https://www.youtube.com/embed/FPyWH6qF3Ug?si=nJ5VnEZbZcZyNx54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
-    livePage: '',
+    image: RailShooter,
+    demo: 'https://www.youtube.com/watch?v=FPyWH6qF3Ug',
     clientRepo: 'https://github.com/justin-foster-91/Argon_Assault',
     serverRepo: '',
     date: '',
@@ -49,7 +50,7 @@ const projects = [
     description: 'This is a revision of the Starfinder Logbook app I made when I was first learning to code. It allows users to create spaceships based on the rules of the game system and customize the various ship parts. It is still in progress but has a drastically cleaner UI and much more functionality.',
     technologies: 'JavaScript, React, HTML, CSS',
     image: Starfinder_Demo,
-    livePage: '',
+    demo: '',
     clientRepo: 'https://github.com/justin-foster-91/Logbook_Client_v2',
     serverRepo: '',
     date: '',
@@ -60,7 +61,7 @@ const projects = [
     description: `Developing a web app that allows users to code “spells” which can be used both within the associated CodeSpells games, but also called within Twitch chat to affect the game being hosted live. This web app stores all spells and enables users to share spells with one another while also displaying spells recently created or modified by other users.`,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, Docker, Express',
     image: codeSharingImage,
-    livePage: '',
+    demo: '',
     clientRepo: 'https://github.com/justin-foster-91/code_sharing',
     serverRepo: '',
     date: '',
@@ -71,7 +72,7 @@ const projects = [
     description: `This was an internship at a startup that turned into a full-time position. I assisted with the development of an educational video game by creating new Unreal assets on my own GitHub profile that are being integrated into the official game.`,
     technologies: 'Lisp, Unreal Engine',
     image: codeSpellsUnrealImage,
-    livePage: '',
+    demo: '',
     clientRepo: 'https://github.com/justin-foster-91/cabin-items',
     serverRepo: '',
     date: 'December - January, 2020',
@@ -82,7 +83,7 @@ const projects = [
     description: `GOAT allows you to create, track, and share your personal and professional goals! The goal creation process allows the user to create goals on their own time frame tailored to their needs. The user can add new goals, update existing goals, and archive goals that don't suit them anymore. Users can also give goals a personal point value. Making progress on a goal earns the user points for redemption in our GOAT store. Users can share mutual goals for friendly competition or keep their goals private behind our secure server.`,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, JWT',
     image: goatImage,
-    livePage: '',
+    demo: '',
     clientRepo: 'https://github.com/thinkful-ei-quail/goat-client.git',
     serverRepo: 'https://github.com/thinkful-ei-quail/goat-api',
     date: 'October, 2020',
@@ -93,7 +94,7 @@ const projects = [
     description: `This is a language learning app based on spaced repetition using data structures to increase the frequency of words that the user has gotten wrong and to decrease the frequency of correct words.`,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, JWT',
     image: repetitionImage,
-    livePage: '',
+    demo: '',
     clientRepo: 'https://github.com/thinkful-ei-quail/SR-Client-Sonali-Justin.git',
     serverRepo: 'https://github.com/thinkful-ei-quail/SR-server-SonaliN-JustinF.git',
     date: 'August, 2020',
@@ -106,7 +107,7 @@ const projects = [
     The system supports individual logins. `,
     technologies: 'React, Node.js, PostgresSQL, JavaScript, JWT',
     image: logbookImage,
-    livePage: '',
+    demo: '',
     clientRepo: 'https://github.com/justin-foster-91/Logbook_Client',
     serverRepo: 'https://github.com/justin-foster-91/Logbook_Server',
     date: 'June, 2020',
@@ -146,9 +147,9 @@ const Portfolio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions className={classes.links}>
-                {project.livePage 
-                &&  <Button size="small" color="primary" href={`${project.livePage}`}>
-                      Live Demo
+                {project.demo 
+                &&  <Button size="small" color="primary" href={`${project.demo}`}>
+                    Demo
                     </Button>
                 }
 
