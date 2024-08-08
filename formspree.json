@@ -1,0 +1,13 @@
+{
+  "forms": {
+    "Contact": {
+      "name": "Sign-up Form",
+      "actions": [{ "type": "email", "to": "jfoster91@email.com" }],
+      "fields": {
+        "name": {"required": "true", "type": "name"},
+        "email": {"required": "true", "type": "email"},
+        "message": {"required": "true", "type": "message"}
+      }
+    }
+  }
+}
