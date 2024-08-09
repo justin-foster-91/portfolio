@@ -77,7 +77,7 @@ const Contact = () => {
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <form className={classes.form} onSubmit={handleSubmit}>
+        <form className={classes.form} action="https://formspree.io/f/jfoster91@gmail.com" method="post">
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
