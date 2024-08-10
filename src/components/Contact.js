@@ -62,6 +62,7 @@ const InputField = withStyles({
 })(TextField);
 
 
+// Reference: https://herotofu.com/solutions/guides/react-contact-form#create-herotofu-backend
 const Contact = () => {
   const { formState, getFormSubmitHandler } = useFormData('https://public.herotofu.com/v1/0d35d7f0-56d5-11ef-8375-1b1d42270640');
 
@@ -79,14 +80,18 @@ const Contact = () => {
             fullWidth={true}
             label="Name"
             variant="outlined"
-            inputProps={{ className: classes.input }}
+            type="text"
+            name="name"
+            required
           />
           <InputField
             fullWidth={true}
             label="Email"
             variant="outlined"
-            inputProps={{ className: classes.input }}
             className={classes.field}
+            type="email"
+            name="email"
+            required
           />
           <InputField
             fullWidth={true}
@@ -94,7 +99,8 @@ const Contact = () => {
             variant="outlined"
             multiline
             rows={4}
-            inputProps={{ className: classes.input }}
+            name="message"
+            required
           />
           <Button
             type="submit"
