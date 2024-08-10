@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Send from "@material-ui/icons/Send";
-import { useForm } from '@formspree/react';
+import { useFormData } from 'herotofu-react';
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -61,23 +61,17 @@ const InputField = withStyles({
   },
 })(TextField);
 
-/*
-<form action="https://formspree.io/f/{form_id}" method="post">
-  <label for="email">Your Email</label>
-  <input name="Email" id="email" type="email">
-  <button type="submit">Submit</button>
-</form>
-*/
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm('signupForm');
+  const { formState, getFormSubmitHandler } = useFormData('https://public.herotofu.com/v1/0d35d7f0-56d5-11ef-8375-1b1d42270640');
 
   const classes = useStyles();
 
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <form className={classes.form} action="https://formspree.io/f/jfoster91@gmail.com" method="post">
+        {!!formState.status && <div className="py-2">Current form status is: {formState.status}</div>}
+        <form className={classes.form} onSubmit={getFormSubmitHandler()}>
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
@@ -108,7 +102,6 @@ const Contact = () => {
             fullWidth={true}
             endIcon={<Send />}
             className={classes.button}
-            disabled={state.submitting}
           >
             Contact Me
           </Button>
