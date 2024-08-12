@@ -1,0 +1,7 @@
+// https://stackoverflow.com/questions/61891328/trigger-github-action-only-on-new-tags
+
+on:
+  push:
+    # Pattern matched against refs/tags
+    tags:        
+      - '*'           # Push events to every tag not containing /
