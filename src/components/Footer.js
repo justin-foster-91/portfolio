@@ -9,20 +9,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 
-const useStyles = makeStyles({
-  bottomNavContainer: {
-    background: "#222",
-  },
-  root: {
-    "& .MuiSvgIcon-root": {
-      fill: "tan",
-      "&:hover": {
-        fill: "tomato",
-        fontSize: "1.8rem",
-      },
-    },
-  },
-});
 
 function openInNewTab(url) {
   const win = window.open(url, '_blank');
@@ -42,4 +28,20 @@ const Footer = () => {
     </BottomNavigation>
   );
 };
+
+const useStyles = makeStyles({
+  bottomNavContainer: {
+    background: "#222",
+  },
+  root: {
+    "& .MuiSvgIcon-root": {
+      fill: "tan",
+      "&:hover": {
+        fill: "tomato",
+        fontSize: "1.8rem",
+      },
+    },
+  },
+});
+
 export default Footer;

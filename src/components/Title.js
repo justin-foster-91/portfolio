@@ -8,29 +8,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../images/myAvatar.png";
 import self from "../images/me.jpeg";
 
-const useStyles = makeStyles((theme) => ({
-  avatar: {
-    width: theme.spacing(15),
-    height: theme.spacing(15),
-    margin: theme.spacing(1),
-  },
-  title: {
-    color: "tomato",
-  },
-  subtitle: {
-    color: "tan",
-    textTransform: "uppercase",
-  },
-  typedContainer: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%,-50%)",
-    width: "100vw",
-    textAlign: "center",
-    zIndex: 1,
-  },
-}));
 
 const Title = () => {
   const classes = useStyles();
@@ -59,5 +36,29 @@ const Title = () => {
     </Box>
   );
 };
+
+const useStyles = makeStyles((theme) => ({
+  avatar: {
+    width: theme.spacing(15),
+    height: theme.spacing(15),
+    margin: theme.spacing(1),
+  },
+  title: {
+    color: "tomato",
+  },
+  subtitle: {
+    color: "tan",
+    textTransform: "uppercase",
+  },
+  typedContainer: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%,-50%)",
+    width: "100vw",
+    textAlign: "center",
+    zIndex: 1,
+  },
+}));
 
 export default Title;

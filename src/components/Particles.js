@@ -2,12 +2,6 @@ import React from "react";
 import { Particles as ReactParticles } from "react-particles-js";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
-  particlesCanvas: {
-    position: "fixed",
-    opacity: "0.3"
-  },
-}));
 
 const Particles = () => {
   const classes = useStyles();
@@ -56,5 +50,12 @@ const Particles = () => {
     />
   );
 };
+
+const useStyles = makeStyles((theme) => ({
+  particlesCanvas: {
+    position: "fixed",
+    opacity: "0.3"
+  },
+}));
 
 export default Particles;

@@ -23,38 +23,6 @@ import self from "../images/me.jpeg";
 import clsx from 'clsx';
 import Footer from "../components/Footer";
 
-const useStyles = makeStyles((theme) => ({
-  appbar: {
-    background: "#222",
-    margin: 0,
-  },
-  arrow: {
-    color: "tomato",
-  },
-  title: {
-    color: "tan",
-  },
-  menuSliderContainer: {
-    width: 250,
-    background: "#511",
-    height: "100%",
-  },
-  avatar: {
-    display: "block",
-    margin: "0.5rem auto",
-    width: theme.spacing(13),
-    height: theme.spacing(13),
-  },
-  listItem: {
-    color: "tan",
-  },
-  toolHeader: {
-    display: 'flex',
-    justifyContent: 'left',
-    marginLeft: '250px',
-    transition: 'margin .5s',
-  }
-}));
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
@@ -113,5 +81,38 @@ const Navbar = () => {
     </>
   );
 };
+
+const useStyles = makeStyles((theme) => ({
+  appbar: {
+    background: "#222",
+    margin: 0,
+  },
+  arrow: {
+    color: "tomato",
+  },
+  title: {
+    color: "tan",
+  },
+  menuSliderContainer: {
+    width: 250,
+    background: "#511",
+    height: "100%",
+  },
+  avatar: {
+    display: "block",
+    margin: "0.5rem auto",
+    width: theme.spacing(13),
+    height: theme.spacing(13),
+  },
+  listItem: {
+    color: "tan",
+  },
+  toolHeader: {
+    display: 'flex',
+    justifyContent: 'left',
+    marginLeft: '250px',
+    transition: 'margin .5s',
+  }
+}));
 
 export default Navbar;

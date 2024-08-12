@@ -18,20 +18,6 @@ import codeSharingImage from "../images/CodeSharingApp.PNG";
 import Starfinder_Demo from "../images/Starfinder_Demo.PNG";
 import RailShooter from "../images/RailShooter.png";
 
-const useStyles = makeStyles((theme) => ({
-  mainContainer: {
-    background: "#233",
-    height: "100%",
-  },
-  cardContainer: {
-    maxWidth: 345,
-    margin: "3rem auto",
-    background: 'rgb(178,190,181)',
-  },
-  links: {
-    justifyContent: "center",
-  }
-}));
 
 const projects = [
   {
@@ -178,5 +164,20 @@ const Portfolio = () => {
     </Box>
   );
 };
+
+const useStyles = makeStyles((theme) => ({
+  mainContainer: {
+    background: "#233",
+    height: "100%",
+  },
+  cardContainer: {
+    maxWidth: 345,
+    margin: "3rem auto",
+    background: 'rgb(178,190,181)',
+  },
+  links: {
+    justifyContent: "center",
+  }
+}));
 
 export default Portfolio;
