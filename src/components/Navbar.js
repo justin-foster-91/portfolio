@@ -20,7 +20,7 @@ import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
 import self from "../images/me.jpeg";
 import Footer from "../components/Footer";
-// import Backdrop from '@mui/material/Backdrop';
+import Backdrop from '@mui/material/Backdrop';
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
@@ -48,7 +48,6 @@ const Navbar = () => {
             button
             key={i}
             className={classes.listItem}
-            onClick={() => setOpen(false)}
             component={Link}
             to={item.listPath}
           >
@@ -76,16 +75,16 @@ const Navbar = () => {
           </Toolbar>
         </AppBar>
       </Box>
-      {/* <Backdrop
+      <Backdrop
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={open}
         onClick={toggleDrawer(false)}
-      > */}
+      >
         <Drawer open={open} anchor="left" hideBackdrop="true" onClose={toggleDrawer(false)}>
           {sideList()}
           <Footer />
         </Drawer>
-      {/* </Backdrop> */}
+      </Backdrop>
     </>
   );
 };
