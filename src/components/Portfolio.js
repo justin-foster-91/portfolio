@@ -35,7 +35,7 @@ const projects = [
     description: 'This is a revision of the Starfinder Logbook app I made when I was first learning to code. It allows users to create spaceships based on the rules of the game system and customize the various ship parts. It is still in progress but has a drastically cleaner UI and much more functionality.',
     technologies: 'JavaScript, React, HTML, CSS',
     image: Starfinder_Demo,
-    demo: '',
+    demo: 'https://justin-foster-91.github.io/Logbook_Client_v2/',
     clientRepo: 'https://github.com/justin-foster-91/Logbook_Client_v2',
     serverRepo: '',
     date: '',
