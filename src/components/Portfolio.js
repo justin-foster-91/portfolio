@@ -103,6 +103,10 @@ const projects = [
 const Portfolio = () => {
   const classes = useStyles();
 
+  const handleCardClick = (ev) => {
+    console.log(ev)
+  }
+
   return (
     <Box component="div" className={classes.mainContainer}>
       <Grid container justify="center">
@@ -110,7 +114,7 @@ const Portfolio = () => {
         {projects.map((project, i) => (
           <Grid item xs={12} sm={8} md={4} key={i}>
             <Card className={classes.cardContainer}>
-              <CardActionArea>
+              <CardActionArea onClick={(ev) => handleCardClick(ev)}>
                 <CardMedia
                   component="img"
                   alt="Project 1"
@@ -132,8 +136,8 @@ const Portfolio = () => {
               </CardActionArea>
               <CardActions className={classes.links}>
                 {project.demo 
-                &&  <Button size="small" color="primary" href={`${project.demo}`}>
-                    Demo
+                &&  <Button size="small" color="primary" href={`${project.demo}`} target="_blank">
+                      Demo
                     </Button>
                 }
 
